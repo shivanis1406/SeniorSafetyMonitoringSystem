@@ -10,7 +10,7 @@ def compute_optical_flow(prev_gray, curr_gray):
     return np.max(magnitude)
 
 def compute_orb_distance(prev_frame, curr_frame, match_threshold = 40):
-    # Initialize ORB detector
+    # Initialize ORB detector https://www.geeksforgeeks.org/feature-matching-using-orb-algorithm-in-python-opencv/
     orb = cv2.ORB_create()
 
     # Find the keypoints and descriptors with ORB
