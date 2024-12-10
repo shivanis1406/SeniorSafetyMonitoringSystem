@@ -172,7 +172,8 @@ def detect_fast_motion(video_path, output_dir, end_time, start_time, window_size
 
     #pixel_diff_scores = np.array(pixel_diff_scores) / np.max(pixel_diff_scores)
     
-    # Combine metrics
+    # Combine metrics 
+    # Dense optical flow method is not included because it is slow on a CPU
     combined_scores = (0.3 * orb_scores) + (0.7 * ssim_scores)
     smoothed_combined_scores = (0.3 * smoothed_orb_scores) + (0.7 * smoothed_ssim_scores)
 
