@@ -123,6 +123,7 @@ def detect_fast_motion(video_path, output_dir, end_time, start_time, window_size
         if height == 360 and width == 640:
             frame = orig_frame
         else:
+            #ssim_score varies with frame resolution. Resize to keep threshold fix across videos of different resolutions
             frame = preprocess_frame(orig_frame, width = 640, height = 360)
 
 
